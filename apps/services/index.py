@@ -6,7 +6,6 @@ def get_domain_ip(domain: str=None, rdtype: str="A", nameservers=None):
     if nameservers is not None:
         myResolver.nameservers = nameservers
     
-    print(myResolver.nameservers)
     query_object = myResolver.resolve(qname=domain, rdtype=rdtype)
 
     return query_object
